@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Announcement</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .duotone-bg {
+            background: 
+                linear-gradient(135deg, rgba(236, 72, 153, 0.8) 0%, rgba(59, 130, 246, 0.8) 50%, rgba(6, 182, 212, 0.9) 100%),
+                radial-gradient(circle at 30% 70%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(34, 197, 94, 0.3) 0%, transparent 50%),
+                linear-gradient(45deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .duotone-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>') repeat;
+            pointer-events: none;
+        }
+        
+        .glass-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-section {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .accent-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .accent-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+        }
+        
+        .info-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+                transform: scale(1.02);
+            }
+        }
+        
+        .elegant-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 80%, transparent 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modern-typography {
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="duotone-bg min-h-full">
+  <main class="container mx-auto px-4 py-12 max-w-6xl"><!-- Hero Header -->
+   <header class="text-center mb-16">
+    <div class="hero-section rounded-3xl p-12 mb-8 text-white">
+     <div class="flex items-center justify-center mb-8">
+      <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-4 rounded-full text-sm font-semibold pulse-glow">
+       📢 IMPORTANT ANNOUNCEMENT
+      </div>
+     </div>
+     <h1 id="announcement-title" class="text-6xl font-light mb-6 modern-typography text-shadow">Technopreneurship Prefinals Schedule Update</h1>
+     <div class="elegant-divider mx-auto w-48 mb-6"></div>
+     <p id="course-name" class="text-3xl font-light opacity-90 text-shadow">Technopreneurship Course</p>
+    </div>
+   </header><!-- Main Content -->
+   <section class="space-y-12"><!-- Schedule Change Notice -->
+    <div class="glass-card rounded-3xl p-10 text-center">
+     <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-2xl p-8 mb-8">
+      <h2 class="text-4xl font-light mb-8 text-shadow">📅 Schedule Change</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+       <div class="bg-white bg-opacity-20 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">
+        <h3 class="font-semibold text-3xl mb-3 text-shadow">B187</h3>
+        <p class="text-2xl font-light">November 12</p>
+       </div>
+       <div class="bg-white bg-opacity-20 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">
+        <h3 class="font-semibold text-3xl mb-3 text-shadow">B188</h3>
+        <p class="text-2xl font-light">November 14</p>
+       </div>
+      </div>
+      <p class="mt-8 text-xl opacity-90 font-light">*Moved due to judges' availability</p>
+     </div>
+    </div><!-- This Week Requirements -->
+    <div class="glass-card rounded-3xl p-10">
+     <h2 class="text-4xl font-light text-gray-800 mb-10 flex items-center justify-center">📋 This Week's Requirements</h2>
+     <div class="space-y-8">
+      <div class="info-card p-8 border-l-4 border-blue-500">
+       <h3 class="font-semibold text-2xl text-gray-800 mb-4">Class Attendance Required</h3>
+       <p class="text-gray-700 text-xl leading-relaxed">All groups must present their deliverables to the instructor</p>
+      </div>
+      <div class="info-card p-8 border-l-4 border-emerald-500">
+       <h3 class="font-semibold text-2xl text-gray-800 mb-4">Peer Evaluation</h3>
+       <p class="text-gray-700 text-xl leading-relaxed mb-6">Complete peer evaluation with your classmates</p><a href="https://forms.gle/VuB3mpgXF9oFf54w8" target="_blank" rel="noopener noreferrer" class="accent-button inline-flex items-center text-white px-8 py-4 rounded-2xl font-semibold text-lg"> 📝 Complete Peer Evaluation Form 
+        <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg></a>
+      </div>
+     </div>
+    </div><!-- Resources -->
+    <div class="glass-card rounded-3xl p-10">
+     <h2 class="text-4xl font-light text-gray-800 mb-10 flex items-center justify-center">📚 Resources &amp; Guidelines</h2>
+     <div class="info-card p-8 border-l-4 border-cyan-500">
+      <p class="text-gray-800 mb-6 text-xl font-medium"><strong>Review requirements:</strong></p><a href="https://steffcaps.github.io/5thTechnopreneurship/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-cyan-600 hover:text-cyan-800 font-semibold text-xl transition-all duration-300 hover:underline"> 🔗 https://steffcaps.github.io/5thTechnopreneurship/ 
+       <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+       </svg></a>
+     </div>
+    </div><!-- Consultation Notice -->
+    <div class="glass-card rounded-3xl p-10">
+     <h2 class="text-4xl font-light text-gray-800 mb-10 flex items-center justify-center">💬 Consultations Available</h2>
+     <div class="info-card p-8 border-l-4 border-purple-500">
+      <p class="text-gray-800 text-xl leading-relaxed"><strong>Need feedback on your output?</strong> Feel free to message me for consultations. Several students have already reached out for feedback - don't hesitate to do the same!</p>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="text-center mt-16">
+    <div class="glass-card rounded-3xl p-12">
+     <div class="elegant-divider mx-auto w-32 mb-8"></div>
+     <p class="text-gray-700 text-xl leading-relaxed">Best regards,<br><span id="instructor-name" class="font-light text-4xl text-gray-800 block mt-4 mb-2 modern-typography">Stefany Caparida</span> <span class="text-cyan-600 font-medium text-lg">Instructor</span></p>
+     <div class="mt-8 text-gray-600 font-medium text-lg">
+      📧 Available for consultations via PM
+     </div>
+    </div>
+   </footer>
+  </main>
+  <script>
+        const defaultConfig = {
+            announcement_title: "Technopreneurship Prefinals Schedule Update",
+            course_name: "Technopreneurship Course",
+            main_message: "Prefinals moved to November 12 (B187) and November 14 (B188)",
+            instructor_name: "Stefany Caparida",
+            duotone_primary: "#ec4899",
+            duotone_secondary: "#06b6d4",
+            accent_color: "#10b981",
+            text_color: "#374151",
+            glass_background: "rgba(255, 255, 255, 0.95)"
+        };
+
+        async function onConfigChange(config) {
+            // Update text content
+            document.getElementById('announcement-title').textContent = 
+                config.announcement_title || defaultConfig.announcement_title;
+            document.getElementById('course-name').textContent = 
+                config.course_name || defaultConfig.course_name;
+            document.getElementById('instructor-name').textContent = 
+                config.instructor_name || defaultConfig.instructor_name;
+
+            // Update colors
+            const duotonePrimary = config.duotone_primary || defaultConfig.duotone_primary;
+            const duotoneSecondary = config.duotone_secondary || defaultConfig.duotone_secondary;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const glassBackground = config.glass_background || defaultConfig.glass_background;
+
+            // Apply duotone background
+            document.body.style.background = `
+                linear-gradient(135deg, ${duotonePrimary}CC 0%, #3b82f6CC 50%, ${duotoneSecondary}E6 100%),
+                radial-gradient(circle at 30% 70%, #a855f766 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, #22c55e4D 0%, transparent 50%),
+                linear-gradient(45deg, #0f172a 0%, #1e293b 100%)
+            `;
+            
+            // Update accent button colors
+            const accentButtons = document.querySelectorAll('.accent-button');
+            accentButtons.forEach(button => {
+                button.style.background = `linear-gradient(135deg, ${accentColor} 0%, #059669 100%)`;
+                button.style.boxShadow = `0 10px 25px ${accentColor}4D`;
+            });
+
+            // Update text colors
+            const textElements = document.querySelectorAll('.text-gray-800');
+            textElements.forEach(element => {
+                element.style.color = textColor;
+            });
+
+            // Update glass card backgrounds
+            const glassCards = document.querySelectorAll('.glass-card');
+            glassCards.forEach(card => {
+                card.style.background = glassBackground;
+            });
+
+            // Update gradient sections
+            const gradientSections = document.querySelectorAll('.bg-gradient-to-r.from-pink-500');
+            gradientSections.forEach(section => {
+                section.style.background = `linear-gradient(to right, ${duotonePrimary}, #f43f5e)`;
+            });
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.duotone_primary || defaultConfig.duotone_primary,
+                        set: (value) => {
+                            config.duotone_primary = value;
+                            window.elementSdk.setConfig({ duotone_primary: value });
+                        }
+                    },
+                    {
+                        get: () => config.duotone_secondary || defaultConfig.duotone_secondary,
+                        set: (value) => {
+                            config.duotone_secondary = value;
+                            window.elementSdk.setConfig({ duotone_secondary: value });
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.glass_background || defaultConfig.glass_background,
+                        set: (value) => {
+                            config.glass_background = value;
+                            window.elementSdk.setConfig({ glass_background: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["announcement_title", config.announcement_title || defaultConfig.announcement_title],
+                ["course_name", config.course_name || defaultConfig.course_name],
+                ["main_message", config.main_message || defaultConfig.main_message],
+                ["instructor_name", config.instructor_name || defaultConfig.instructor_name]
+            ]);
+        }
+
+        // Initialize the SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9990a526f048a9a0',t:'MTc2MjIyMjk2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
